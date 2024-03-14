@@ -22,9 +22,7 @@ app.use(express.json());
 app.listen(8000,()=>{
     console.log("hello world")
 })
-app.use("/",(req,res)=>{
-    res.json({message:"hello"})
-})
+
 app.get('/',async(req,res)=>{
     let d=await User.find()
     res.send(d)
