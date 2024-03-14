@@ -36,7 +36,7 @@ app.get('/:name',async(req,res)=>{
 app.post("/",async(req,res)=>{
     let d=req.body
     User.create(d)
-    res.send()
+    res.send(req.body)
 })
 app.put("/:id",async(req,res)=>{
     let d=req.params.id
